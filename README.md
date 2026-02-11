@@ -1,217 +1,180 @@
-📊 Telco Customer Churn Prediction (Machine Learning Project)
-🧠 Project Overview
+# 📊 Telco Customer Churn Prediction (Machine Learning Project)
 
-Customer churn is a major challenge for telecom companies.
+## 🧠 Project Overview
+Customer churn is a major challenge for telecom companies.  
 This project predicts whether a customer will leave the service (churn) using machine learning techniques on a real-world telecom dataset.
 
 The project demonstrates a complete ML pipeline including:
+- Data cleaning  
+- Exploratory Data Analysis (EDA)  
+- Feature engineering  
+- Baseline model  
+- Improved model  
+- Model comparison  
+- Error analysis  
 
-Data cleaning
+This notebook was implemented in **Google Colab** for academic submission.
 
-Exploratory Data Analysis (EDA)
+---
 
-Feature engineering
-
-Baseline model
-
-Improved model
-
-Model comparison
-
-Error analysis
-
-This notebook was implemented in Google Colab and prepared for academic submission.
-
-🎯 Objective
-
+## 🎯 Objective
 To build a machine learning model that predicts whether a telecom customer will churn based on demographic, billing, and service usage features.
 
-🗂 Dataset
+---
 
-Dataset: Telco Customer Churn Dataset
-Contains:
+## 🗂 Dataset
+**Dataset:** Telco Customer Churn Dataset  
 
-Customer demographics
+The dataset contains:
+- Customer demographics  
+- Contract details  
+- Billing information  
+- Service subscriptions  
+- Churn label (Yes/No)  
 
-Contract details
-
-Billing information
-
-Service subscriptions
-
-Churn label (Yes/No)
-
-Target variable:
-
+**Target Variable:**
+```
 Churn (1 = Yes, 0 = No)
+```
 
-⚙️ Technologies Used
+---
 
-Python
+## ⚙️ Technologies Used
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Scikit-learn  
+- Google Colab  
 
-Pandas
+---
 
-NumPy
+## 🔎 Project Workflow
 
-Matplotlib
+### 1. Data Cleaning
+- Removed unnecessary columns (`customerID`)  
+- Converted `TotalCharges` to numeric  
+- Handled missing values  
+- Encoded target variable  
 
-Seaborn
-
-Scikit-learn
-
-Google Colab
-
-🔎 Project Workflow
-1. Data Cleaning
-
-Removed unnecessary columns (customerID)
-
-Converted TotalCharges to numeric
-
-Handled missing values
-
-Encoded target variable
-
-2. Exploratory Data Analysis
-
+### 2. Exploratory Data Analysis (EDA)
 EDA was performed to understand patterns affecting churn:
+- Contract type vs churn  
+- Monthly charges vs churn  
+- Tenure distribution  
+- Churn class distribution  
 
-Contract type vs churn
-
-Monthly charges vs churn
-
-Tenure distribution
-
-Churn class distribution
-
-Key insight:
+**Key Insight:**  
 Customers with month-to-month contracts and higher monthly charges are more likely to churn.
 
-🤖 Models Used
-Baseline Model
+---
 
-Logistic Regression
+## 🤖 Models Used
 
-Used as baseline classifier
+### Baseline Model
+**Logistic Regression**
+- Used as baseline classifier  
+- Requires feature scaling  
+- Interpretable results  
 
-Requires feature scaling
+### Improved Model
+**Random Forest Classifier**
+- Handles non-linear relationships  
+- Captures feature interactions  
+- Higher accuracy than baseline  
 
-Interpretable results
+---
 
-Improved Model
+## 📈 Model Performance
 
-Random Forest Classifier
-
-Handles non-linear relationships
-
-Captures feature interactions
-
-Higher accuracy than baseline
-
-📈 Model Performance
-Model	Accuracy
-Logistic Regression	~80%
-Random Forest	~84–86%
+| Model | Accuracy |
+|------|---------|
+| Logistic Regression | ~80% |
+| Random Forest | ~84–86% |
 
 Random Forest outperformed Logistic Regression in predicting churn.
 
-📊 Evaluation Metrics
+---
 
-Accuracy
-
-Confusion Matrix
-
-Classification Report
-
-Feature Importance
+## 📊 Evaluation Metrics
+- Accuracy  
+- Confusion Matrix  
+- Classification Report  
+- Feature Importance  
 
 Confusion matrix was used to analyze:
+- False positives  
+- False negatives  
+- Overall prediction quality  
 
-False positives
+---
 
-False negatives
-
-Overall prediction quality
-
-⭐ Feature Importance
-
+## ⭐ Feature Importance
 Top factors influencing churn:
+- Contract type  
+- Monthly charges  
+- Tenure  
+- Internet service type  
 
-Contract type
+These features significantly impact customer retention.
 
-Monthly charges
+---
 
-Tenure
-
-Internet service type
-
-These features play a significant role in customer retention.
-
-🧪 Error Analysis
-
+## 🧪 Error Analysis
 Some churn cases were misclassified due to:
-
-Class imbalance
-
-Overlapping customer behavior patterns
+- Class imbalance  
+- Overlapping customer behavior patterns  
 
 Possible improvements:
+- SMOTE for class balancing  
+- Hyperparameter tuning  
+- XGBoost model  
+- Cross-validation  
 
-SMOTE for class balancing
+---
 
-Hyperparameter tuning
-
-XGBoost model
-
-Cross-validation
-
-📌 Conclusion
-
+## 📌 Conclusion
 This project successfully built a machine learning model to predict telecom customer churn.
 
 Key findings:
-
-Contract type and monthly charges strongly influence churn
-
-Random Forest performed better than Logistic Regression
-
-Proper preprocessing and EDA significantly improve model performance
+- Contract type and monthly charges strongly influence churn  
+- Random Forest performed better than Logistic Regression  
+- Proper preprocessing and EDA significantly improve model performance  
 
 This project demonstrates a complete end-to-end machine learning workflow suitable for academic and practical applications.
 
-▶️ How to Run
+---
 
-Open the notebook in Google Colab
+## ▶️ How to Run
+1. Open the notebook in Google Colab  
+2. Upload the dataset CSV  
+3. Run all cells  
+4. View results and visualizations  
 
-Upload dataset CSV
+---
 
-Run all cells
-
-View results and visualizations
-
-📁 Repository Structure
+## 📁 Repository Structure
+```
 telco-churn-ml/
 │
 ├── Telco_Churn_Project.ipynb
 └── README.md
+```
 
-👨‍💻 Author
+---
 
-Krishna Aggarwal
-Machine Learning Project Submission
+## 👨‍💻 Author
+**Krishna Aggarwal**  
+Machine Learning Project Submission  
 
-📎 Submission Note
+---
 
+## 📎 Submission Note
 This project was created as part of a machine learning assignment requiring:
-
-Data cleaning
-
-EDA
-
-Baseline model
-
-Improved model
-
-Error analysis
-
-GitHub submission
+- Data cleaning  
+- EDA  
+- Baseline model  
+- Improved model  
+- Error analysis  
+- GitHub submission  
